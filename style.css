@@ -1,0 +1,37 @@
+body {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: whitesmoke;
+}
+
+.nav-links {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  margin-right: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: black;
+  line-height: 1.5; /* Ensures that text is vertically aligned */
+}
+
+.button {
+  background-color: aquamarine;
+  padding: 6px 10px;
+  border-radius: 3px;
+  display: inline-block; /* Ensures it stays inline with the other elements */
+  line-height: 1.5; /* Aligns the button text vertically with the other menu items */
+  margin-left: 20px; /* Adds some space between the button and the last menu item */
+}
+

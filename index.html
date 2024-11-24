@@ -1,0 +1,69 @@
+<!doctype html>
+<html>
+
+<head>
+    <!-- Declares the character set for the document -->
+    <meta charset="UTF-8">
+    
+    <!-- Makes the website responsive on different screen sizes -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Includes Tailwind CSS for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts integration for better typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Adds icons from Ionicons -->
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+</head>
+
+<body class="font-[Poppins] bg-gradient-to-t from-[#fbc2eb] to-[#a6c1ee] h-screen">
+    <!-- Sets a gradient background and full-screen height -->
+
+    <header class="bg-white">
+        <!-- Header section with a white background -->
+        <nav class="flex justify-between items-center w-[92%] mx-auto">
+            <!-- Navigation bar with flexible layout -->
+            <div>
+                <!-- Logo Section -->
+                <img class="w-16 cursor-pointer" src="https://cdn-icons-png.flaticon.com/512/5968/5968204.png" alt="Logo">
+            </div>
+            <div class="nav-links duration-500 md:static absolute bg-white md:min-h-fit min-h-[60vh] left-0 top-[-100%] md:w-auto w-full flex items-center px-5">
+                <!-- Navigation links (hidden on small screens by default) -->
+                <ul class="flex md:flex-row flex-col md:items-center md:gap-[4vw] gap-8">
+                    <!-- Links are displayed in a row for larger screens, but stacked on smaller ones -->
+                    <li><a class="hover:text-gray-500" href="#">Products</a></li>
+                    <li><a class="hover:text-gray-500" href="#">Solution</a></li>
+                    <li><a class="hover:text-gray-500" href="">Resource</a></li>
+                    <li><a class="hover:text-gray-500" href="#">Developers</a></li>
+                    <li><a class="hover:text-gray-500" href="#">Pricing</a></li>
+                </ul>
+            </div>
+            <div class="flex items-center gap-6">
+                <!-- Sign-in button and hamburger menu for mobile screens -->
+                <button class="bg-[#a6c1ee] text-white px-5 py-2 rounded-full hover:bg-[#87acec]">Sign in</button>
+                <!-- Hamburger menu icon (visible only on small screens) -->
+                <ion-icon onclick="onToggleMenu(this)" name="menu" class="text-3xl cursor-pointer md:hidden"></ion-icon>
+            </div>
+        </nav>
+    </header>
+
+    <!-- JavaScript to handle the toggle of the navigation menu -->
+    <script>
+        // Selects the navigation links container
+        const navLinks = document.querySelector('.nav-links');
+        
+        // Function to toggle the menu visibility
+        function onToggleMenu(e) {
+            // Switch the icon between 'menu' and 'close'
+            e.name = e.name === 'menu' ? 'close' : 'menu';
+            // Toggle the menu's position to make it appear or disappear
+            navLinks.classList.toggle('top-[9%]');
+        }
+    </script>
+</body>
+
+</html>
